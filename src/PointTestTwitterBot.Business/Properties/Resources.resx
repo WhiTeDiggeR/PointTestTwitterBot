@@ -118,9 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ConnectionFailed" xml:space="preserve">
-    <value>Failed to establish connection to https://twitter.com</value>
+    <value>Не удалось подключиться к "https://twitter.com"</value>
   </data>
   <data name="TweetNotSent" xml:space="preserve">
-    <value>Tweet don't been send</value>
+    <value>Твит не отправлен</value>
   </data>
 </root>

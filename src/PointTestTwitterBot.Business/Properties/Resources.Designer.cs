@@ -61,7 +61,7 @@ namespace PointTestTwitterBot.Business.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to establish connection to https://twitter.com.
+        ///   Looks up a localized string similar to Не удалось подключиться к &quot;https://twitter.com&quot;.
         /// </summary>
         internal static string ConnectionFailed {
             get {
@@ -70,7 +70,7 @@ namespace PointTestTwitterBot.Business.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tweet don&apos;t been send.
+        ///   Looks up a localized string similar to Твит не отправлен.
         /// </summary>
         internal static string TweetNotSent {
             get {

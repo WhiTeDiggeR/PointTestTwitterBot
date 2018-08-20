@@ -34,6 +34,7 @@ namespace PointTestTwitterBot
             
             while (true)
             {
+                Console.Write($"{Resources.EnterLogin} ({Resources.ForExit}): ");
                 var line = Console.ReadLine();
 
                 if (string.IsNullOrWhiteSpace(line)) break;
@@ -48,12 +49,12 @@ namespace PointTestTwitterBot
                 }
 
                 var statistics = GetMessagesStatistics(line, posts);
-
                 var statisticsJson = JsonSerialization.SerializeObject(statistics.GetCharactersStatistics());
+                var message = $"@{line}, {Resources.LastTweetsStatistics.Replace("{0}", $"{PostsCount}")}: {statisticsJson}";
 
                 try
                 {
-                    connection.Post($"@{line}, {Resources.LastTweetsStatistics.Replace("{0}", $"{PostsCount}")}: {statisticsJson}");
+                    connection.Post(message);
                 }
                 catch (Exception e)
                 {
@@ -62,7 +63,7 @@ namespace PointTestTwitterBot
                     Console.ResetColor();
                 }
 
-                Console.WriteLine(statisticsJson);
+                Console.WriteLine(message);
                 Console.WriteLine();
             }
         }
@@ -85,53 +86,5 @@ namespace PointTestTwitterBot
 
             return statistics;
         }
-
-        //private static void AuthorizeAsUser(IConnection connection)
-        //{
-        //    string userName;
-        //    string password;
-
-        //    while (true)
-        //    {
-        //        Console.WriteLine($"{Resources.EnterToAccount}:");
-        //        Console.Write($"{Resources.UserName}: ");
-        //        userName = Console.ReadLine();
-        //        Console.Write($"{Resources.Password}: ");
-        //        password = ReadPassword();
-
-        //        var account = new Account(userName.FormatTwitterUserName(), password);
-        //    }
-        //}
-
-        //private static string ReadPassword()
-        //{
-        //    var password = "";
-        //    var info = Console.ReadKey(true);
-        //    while (info.Key != ConsoleKey.Enter)
-        //    {
-        //        if (info.Key != ConsoleKey.Backspace)
-        //        {
-        //            if (char.IsLetterOrDigit(info.KeyChar) || char.IsPunctuation(info.KeyChar))
-        //            {
-        //                Console.Write("*");
-        //                password += info.KeyChar;
-        //            }
-        //        }
-        //        else if (info.Key == ConsoleKey.Backspace)
-        //        {
-        //            if (!string.IsNullOrEmpty(password))
-        //            {
-        //                password = password.Substring(0, password.Length - 1);
-        //                var pos = Console.CursorLeft;
-        //                Console.SetCursorPosition(pos - 1, Console.CursorTop);
-        //                Console.Write(" ");
-        //                Console.SetCursorPosition(pos - 1, Console.CursorTop);
-        //            }
-        //        }
-        //        info = Console.ReadKey(true);
-        //    }
-        //    Console.WriteLine();
-        //    return password;
-        //}
     }
 }

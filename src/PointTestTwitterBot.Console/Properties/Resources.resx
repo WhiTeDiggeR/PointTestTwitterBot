@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="EnterLogin" xml:space="preserve">
+    <value>Введите логин аккаунта</value>
+  </data>
   <data name="EnterToAccount" xml:space="preserve">
     <value>Пожалуйста, войдите в свой аккаунт</value>
+  </data>
+  <data name="ForExit" xml:space="preserve">
+    <value>enter для выхода</value>
   </data>
   <data name="LastTweetsStatistics" xml:space="preserve">
     <value>статистика для последних {0} твитов</value>

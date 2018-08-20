@@ -59,7 +59,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Serialization\JsonSerialization.cs" />
-    <Compile Include="TestConnection.cs" />
     <Compile Include="TwitterConnection.cs" />
   </ItemGroup>
   <ItemGroup>
