@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Enums\ABCen.cs" />
     <Compile Include="Enums\ABCru.cs" />
+    <Compile Include="Interfaces\IConnection.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Statistics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,14 +59,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Serialization\JsonSerialization.cs" />
-    <Compile Include="TwitterConnection.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PointTestTwitterBot.Interfaces\PointTestTwitterBot.Interfaces.csproj">
-      <Project>{4ddbc4da-d501-4654-9a91-16a9b56da040}</Project>
-      <Name>PointTestTwitterBot.Interfaces</Name>
-    </ProjectReference>
+    <Compile Include="Connections\TestConnection.cs" />
+    <Compile Include="Connections\TwitterConnection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -77,5 +72,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

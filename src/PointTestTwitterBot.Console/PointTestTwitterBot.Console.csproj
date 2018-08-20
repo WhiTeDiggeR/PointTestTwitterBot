@@ -59,6 +59,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="TwitterReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -74,10 +75,6 @@
     <ProjectReference Include="..\PointTestTwitterBot.Business\PointTestTwitterBot.Business.csproj">
       <Project>{AB7C0063-A36C-4D69-9999-7B3875215B28}</Project>
       <Name>PointTestTwitterBot.Business</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PointTestTwitterBot.Interfaces\PointTestTwitterBot.Interfaces.csproj">
-      <Project>{4ddbc4da-d501-4654-9a91-16a9b56da040}</Project>
-      <Name>PointTestTwitterBot.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
